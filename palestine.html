@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestine</title>
+    <style>
+            body {
+            text-align: center;
+            }
+            
+            #message {
+            font-size: 35px;
+            color:red;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+            }
+            
+            #image {
+            transition: filter 0.5s;
+            height:400px;
+            filter:grayscale(100%) ;
+            }
+            
+            .hidden {
+            display: none;
+            }
+            
+            .column {
+            padding: 50px;
+            height: 300px; 
+            }
+            
+            button{
+            margin-top:40px;
+            height:60px;
+            width:200px;
+            border-radius:50px;
+            }
+        </style>
+</head>
+<body>
+    <div class="column">
+        
+        <p id="message">Free Palestine !!!</p>
+        
+        <img id="image" src="https://pbs.twimg.com/media/F8TWKqmXYAAWWnX?format=jpg&name=large" alt="Palestine Image" >
+        
+        <button id="button" onclick="toggleMessage()">What is the future?</button>
+        
+    </div>
+        <script>
+            let clicked = false;
+    
+            function toggleMessage() {
+                const message = document.getElementById("message");
+                const image = document.getElementById("image");
+    
+                if (clicked) {
+                  message.classList.remove("hidden");
+                    image.style.filter = "grayscale(100%)";
+                    clicked = false;
+                } else {
+                    message.classList.add("hidden");
+                    image.style.filter = "none";            
+                    clicked = true;
+                }
+            }
+        </script>
+    </body>
+</html>
